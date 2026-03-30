@@ -1,10 +1,6 @@
-const express = require('express');
-const app = express();
+const http = require("http");
 
-app.get('/', (req, res) => {
-  res.send('Hello from Docker + Jenkins 🚀');
-});
-
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
+http.createServer((req, res) => {
+  res.write("Hello from Docker + Jenkins 🚀");
+  res.end();
+}).listen(3000);
