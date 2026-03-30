@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
     if (req.url === "/") {
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({
-            message: "Hello from docker i triggers + Jenkins 🚀",
+            message: "Hello from docker run in trigger + Jenkins 🚀",
             environment: process.env.NODE_ENV || "development",
             hostname: require("os").hostname()
         }));
